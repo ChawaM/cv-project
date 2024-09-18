@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex; /* Use flexbox for horizontal layout */
+}
+
+/* Container for Form and Output */
+.container {
+  width: 100%; /* Take full width */
+  display: flex;
+  flex-direction: row; /* Ensure horizontal layout */
+  justify-content: space-between; /* Space between form and output */
+}
+
+/* Form Styles */
+form {
+  flex: 1 0 50%; /* Take up 50% of the space */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h1,
+h3 {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="phonenumber"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+/* Output Styles */
+.container > div {
+  flex: 1 0 50%; /* Take up 50% of the space */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  form,
+  .container > div {
+    flex: 1 0 100%; /* Take full width on smaller screens */
+  }
+}
